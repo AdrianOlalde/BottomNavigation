@@ -27,10 +27,24 @@
         android:id="@+id/profileFragment"
         android:name="com.example.navegation.profileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_muestraDatos"
+            app:destination="@id/muestraDatos" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.navegation.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/muestraDatos"
+        android:name="com.example.navegation.MuestraDatos"
+        android:label="fragment_muestra_datos"
+        tools:layout="@layout/fragment_muestra_datos" >
+        <argument
+            android:name="Datos"
+            app:argType="string[]"
+            app:nullable="true" />
+    </fragment>
 </navigation>

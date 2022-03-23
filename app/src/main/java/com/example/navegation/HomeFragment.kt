@@ -11,9 +11,7 @@ import com.example.navegation.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
     private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
@@ -27,6 +25,7 @@ class HomeFragment : Fragment() {
 
             //navController.navigate(R.id.action_homeFragment_to_insideHome)
             val direccion = HomeFragmentDirections.actionHomeFragmentToInsideHome("Hola mundo")
+            findNavController().navigate(direccion)
         }
         return binding.root
     }
